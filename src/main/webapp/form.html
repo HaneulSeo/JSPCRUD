@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="col-md-8 order-md-1">
+    <h2 class="mb-3">Student Information</h2>
+    <form class="needs-validation" novalidate="" id="form" name="form" action="form_ok.jsp" method="post">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                    Valid first name is required.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                    Valid last name is required.
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="birthdate">Birthdate: </label>
+            <input type="date" id="birthdate" name="birthdate" value="2000-01-01" min="1990-01-01" max="2022-12-31">
+            <div class="invalid-feedback">
+                Please enter your birthdate.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="gender">성별: </label>
+            <input type="radio" id="gender" name="gender1" value="M">Male
+            <input type="radio" id="gender" name="gender1" value="F">Female
+        </div>
+
+        <div class="mb-3">
+            <label for="studentNumber">Student Number</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="studentNumber" name="studentNumber" placeholder="00000000" required="">
+                <div class="invalid-feedback" style="width: 100%;">
+                    Your student number is required.
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="phone">Phone Number</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="010-xxxx-xxxx" required="">
+            <div class="invalid-feedback">
+                phone number is required
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="studentNum@handong.ac.kr">
+            <div class="invalid-feedback">
+                Please enter a valid email address.
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5 mb-3">
+                <label for="major">Major</label>
+                <select class="custom-select d-block w-100" id="major" name="major1" required="">
+                    <option value="">Choose...</option>
+                    <option id="major" name="major1" value="Global Leadership School">Global Leadership School</option>
+                    <option id="major" name="major1" value="Global Entrepreneurship and ICT">Global Entrepreneurship and ICT</option>
+                    <option id="major" name="major1" value="Management & Econmics">Management & Econmics</option>
+                    <option id="major" name="major1" value="School of Communication Arts">School of Communication Arts</option>
+                    <option id="major" name="major1" value="International Studies, Languages & Literature">International Studies, Languages & Literature</option>
+                    <option id="major" name="major1" value="Mechanical & Control Engineering">Mechanical & Control Engineering</option>
+                    <option id="major" name="major1" value="School of Law">School of Law</option>
+                    <option id="major" name="major1" value="Counselling Psychology & Social Welfare">Counselling Psychology & Social Welfare</option>
+                    <option id="major" name="major1" value="Life Science">Life Science</option>
+                    <option id="major" name="major1" value="Computer Science and Electrical Engineering">Computer Science and Electrical Engineering</option>
+                    <option id="major" name="major1" value="School of Creative Convergence Education">School of Creative Convergence Education</option>
+                    <option id="major" name="major1" value="School of Communication Arts">School of Communication Arts</option>
+                    <option id="major" name="major1" value="Contents Convergence Design">Contents Convergence Design</option>
+
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid major.
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="rc">RC</label>
+                <select class="custom-select d-block w-100" id="rc" name="rc" required="">
+                    <option value="">Choose...</option>
+                    <option id="rc" name="rc" value="Torrey">Torrey</option>
+                    <option id="rc" name="rc" value="Jangkiryeo">Jangkiryeo</option>
+                    <option id="rc" name="rc" value="Kuyper">Kuyper</option>
+                    <option id="rc" name="rc" value="Sonyangwon">Sonyangwon</option>
+                    <option id="rc" name="rc" value="Philadelphos">Philadelphos</option>
+                    <option id="rc" name="rc" value="Carmichael">Carmichael</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please provide a valid rc name.
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="grade">Grade</label>
+                <select class="custom-select d-block w-100" id="grade" name="grade" required="">
+                    <option value="">Choose...</option>
+                    <option id="grade" name="grade" value="1">Freshman</option>
+                    <option id="grade" name="grade" value="2">Sophomore</option>
+                    <option id="grade" name="grade" value="3">Junior</option>
+                    <option id="grade" name="grade" value="4">Senior</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please provide a valid grade.
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="number">Number of Family: </label>
+            <input type="number" id="number" name="number" min="1" max="20" step="1">
+            <div class="invalid-feedback">
+                Family number is required
+            </div>
+        </div>
+
+
+        <hr class="mb-4">
+
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="save-info">
+            <label class="custom-control-label" for="save-info">Save this information for next time</label>
+        </div>
+
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
